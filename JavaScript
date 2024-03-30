@@ -1,0 +1,63 @@
+// Function to display upcoming events
+function displayEvents() {
+  // Fetch events data from the server
+  // Assuming the server returns an array of event objects
+  const events = fetchEventsFromServer();
+
+  // Display events on the webpage
+  const eventsContainer = document.getElementById('events-container');
+  events.forEach(event => {
+    const eventElement = document.createElement('div');
+    eventElement.classList.add('event');
+    eventElement.innerHTML = `
+      <h3>${event.title}</h3>
+      <p>Date: ${event.date}</p>
+      <p>Location: ${event.location}</p>
+      <p>Description: ${event.description}</p>
+    `;
+    eventsContainer.appendChild(eventElement);
+  });
+}
+
+// Function to fetch events data from the server (dummy function)
+function fetchEventsFromServer() {
+  // Dummy data for demonstration
+  return [
+    {
+      title: 'School Picnic',
+      date: 'April 15, 2024',
+      location: 'Central Park',
+      description: 'Join us for a day of fun and games!'
+    },
+    {
+      title: 'Parent-Teacher Conference',
+      date: 'May 5, 2024',
+      location: 'School Auditorium',
+      description: 'Discuss your child\'s progress with teachers.'
+    }
+    // More event objects can be added here
+  ];
+}
+
+// Function to toggle visibility of navigation menu on small screens
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('visible');
+}
+
+// Function to validate contact form inputs
+function validateForm() {
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  // Simple validation - check if inputs are not empty
+  if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+    alert('Please fill in all fields.');
+    return false;
+  }
+
+  // Additional validation logic can be added here (e.g., email format validation)
+
+  return true;
+}
