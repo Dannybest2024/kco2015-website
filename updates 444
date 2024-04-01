@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2015set King's College Old Students Association</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for social media icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .social-icons li:last-child {
+            margin-right: 0;
+        }
+        .social-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .social-icons li a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>2015set King's College Old Students Association</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>King's College Old Students Association 2015set was set up on December 27th, 2017. This association was established under the umbrella of King's College management and in conjunction with some vibrant old students of 2015set. The purpose of initiating this association was to promote peace and harmony and also to uplift the affairs of the students and school management. We encourage and enhance learning to the people in the community and the country at large.</p>
+        </section>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div id="events-container"></div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:clientsmailbox247@gmail.com">clientsmailbox247@gmail.com</a><br>
+            Facebook: <a href="https://www.facebook.com/profile.php?id=100064031405873">King's College Old Students Association 2015set</a><br>
+            Phone: 08127672010</p>
+        </section>
+        <section id="membership">
+            <h2>OFFICIAL ACTIVE MEMBERSHIP REGISTRATION BOOK FOR KCO2015set</h2>
+            <ul>
+                <li>Owoicho Daniel: 09035423458</li>
+                <!-- Membership list continues... -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 King's College Old Students Association. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to display upcoming events
+        function displayEvents() {
+          // Fetch events data from the server
+          // Assuming the server returns an array of event objects
+          const events = [
+            {
+              title: "Annual Meeting",
+              date: "December 27th",
+              location: "King's College Ogobia Ugboju school premises, Ogobia Ugboju along Onyangede road, Otukpo, Benue state",
+              description: "Annual meeting held on December 27th of every year. Venue: King's College Ogobia Ugboju school premises, Location: Ogobia Ugboju along Onyangede road, Otukpo, Benue state. Time: 12pm prompt."
+            }
+          ];
+        
+          // Display events on the webpage
+          const eventsContainer = document.getElementById('events-container');
+          events.forEach(event => {
+            const eventElement = document.createElement('div');
+            eventElement.classList.add('event');
+            eventElement.innerHTML = `
+              <h3>${event.title}</h3>
+              <p>Date: ${event.date}</p>
+              <p>Location: ${event.location}</p>
+              <p>Description: ${event.description}</p>
+            `;
+            eventsContainer.appendChild(eventElement);
+          });
+        }
+        // Call the function to display events
+        displayEvents();
+    </script>
+</body>
+</html>

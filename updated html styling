@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2015set King's College Old Students Association</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>2015set King's College Old Students Association</h1>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#events">Events</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>King's College Old Students Association 2015set was set up on December 27th, 2017. This association was established under the umbrella of King's College management and in conjunction with some vibrant old students of 2015set. The purpose of initiating this association was to promote peace and harmony and also to uplift the affairs of the students and school management. We encourage and enhance learning to the people in the community and the country at large.</p>
+</section>
+
+<section id="events">
+  <h2>Upcoming Events</h2>
+  <div id="events-container"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:clientsmailbox247@gmail.com">clientsmailbox247@gmail.com</a><br>
+  Facebook: <a href="https://www.facebook.com/profile.php?id=100064031405873">King's College Old Students Association 2015set</a><br>
+  Phone: 08127672010</p>
+</section>
+
+<section id="membership">
+  <h2>OFFICIAL ACTIVE MEMBERSHIP REGISTRATION BOOK FOR KCO2015set</h2>
+  <ul>
+    <!-- Insert membership details here -->
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2024 King's College Old Students Association. All rights reserved.</p>
+</footer>
+
+<script>
+  // Function to display upcoming events
+  function displayEvents() {
+    // Fetch events data from the server
+    // Assuming the server returns an array of event objects
+    const events = fetchEventsFromServer();
+  
+    // Display events on the webpage
+    const eventsContainer = document.getElementById('events-container');
+    events.forEach(event => {
+      const eventElement = document.createElement('div');
+      eventElement.classList.add('event');
+      eventElement.innerHTML = `
+        <h3>${event.title}</h3>
+        <p>Date: ${event.date}</p>
+        <p>Location: ${event.location}</p>
+        <p>Description: ${event.description}</p>
+      `;
+      eventsContainer.appendChild(eventElement);
+    });
+  }
+</script>
+
+</body>
+</html>
